@@ -7,28 +7,32 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/hello_text"
+        android:layout_width="274dp"
+        android:layout_height="175dp"
         android:text="Hello World!"
+        android:textColor="#000000"
+        android:textColorHighlight="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:id="@+id/hello_text"
-        />
+        app:layout_constraintVertical_bias="0.419" />
 
     <Button
+        android:id="@+id/hello_button"
         android:layout_width="300px"
         android:layout_height="100px"
+        android:layout_marginTop="200px"
+        android:onClick="onHelloClick"
+        android:text="click me"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="200px"
-        android:text="click me"
-        android:id="@+id/hello_button"
-        android:onClick="onHelloClick"
-        />
+        app:layout_constraintVertical_bias="0.623" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
