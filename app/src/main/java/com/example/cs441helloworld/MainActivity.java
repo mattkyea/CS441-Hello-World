@@ -2,7 +2,6 @@ package com.example.cs441helloworld;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.res.ColorStateList;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
@@ -12,7 +11,11 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     TextView helloText;
-    Button helloButton;
+    Button colorButton;
+    Button boldButton;
+    Button italicsButton;
+    Button moveButton;
+    Button capsButton;
     int numOfPresses = 1;
 
     @Override
@@ -22,30 +25,36 @@ public class MainActivity extends AppCompatActivity {
 
         //find the IDs set in activity_main.xml to set the variables here
         helloText = (TextView) findViewById(R.id.hello_text);
-        helloButton = (Button) findViewById(R.id.hello_button);
+        boldButton = (Button) findViewById(R.id.bold_button);
+        colorButton = (Button) findViewById(R.id.color_button);
+        italicsButton = (Button) findViewById(R.id.italics_button);
+        moveButton = (Button) findViewById(R.id.move_button);
+        capsButton =(Button) findViewById(R.id.caps_button);
 
     }
 
     //called when button is pressed
-    public void onHelloClick(View view){
-        switch(numOfPresses){
-            case 1:
-                System.out.println("case 1");
-                helloText.setTextSize(64);
-                break;
-            case 2:
-                System.out.println("case 2");
-                helloText.setAllCaps(true);
-                break;
-            case 3:
-                System.out.println("case 3");
-                helloText.setTextColor(0xFFFFFF00);//maybe add random number for color
-                break;
-            case 4:
-                System.out.println("case 4");
-                helloText.setTypeface(Typeface.MONOSPACE, Typeface.BOLD);
-                break;
-        }
-        numOfPresses++;
+    public void onColorClick(View view) {
+        //make random color from random num
+        helloText.setTextColor(0xFFFFFF00);
+    }
+
+    //called when button is pressed
+    public void onBoldClick(View view) {
+        helloText.setTypeface(Typeface.MONOSPACE, Typeface.BOLD);
+    }
+
+    //called when button is pressed
+    public void onItalicsClick(View view) {
+        helloText.setTypeface(Typeface.MONOSPACE, Typeface.ITALIC);
+    }
+    //called when button is pressed
+    public void onMoveClick(View view) {
+        //figure out how
+    }
+
+    //called when button is pressed
+    public void onCapsClick(View view) {
+        helloText.setAllCaps(true);
     }
 }
